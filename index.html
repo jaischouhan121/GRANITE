@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Granite Factory ERP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#111827',     // slate-900
+              'secondary': '#1f2937',   // slate-800
+              'accent': '#374151',      // slate-700
+              'highlight': '#9ca3af',    // slate-400
+              'text-primary': '#f9fafb', // slate-50
+              'text-secondary': '#d1d5db', // slate-300
+              'brand': '#6366f1',       // indigo-500
+            },
+          },
+        },
+      }
+    </script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "immer": "https://aistudiocdn.com/immer@^10.2.0"
+  }
+}
+</script>
+<style>
+  @media print {
+    header, .no-print {
+      display: none !important;
+    }
+    body {
+        background-color: white;
+        color: black;
+    }
+    .bg-primary, .bg-secondary, .bg-accent {
+        background-color: transparent !important;
+        color: black !important;
+    }
+    .text-text-primary, .text-text-secondary, .text-highlight, .text-brand, .text-yellow-400, .text-red-400, .text-blue-800, .text-green-800, .text-yellow-800, .text-red-800 {
+        color: black !important;
+    }
+    .bg-blue-100, .bg-green-100, .bg-yellow-100, .bg-red-100 {
+      background-color: #f0f0f0 !important;
+    }
+    main {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .shadow-lg {
+        box-shadow: none !important;
+    }
+    .p-8 {
+      padding: 1rem !important;
+    }
+    .rounded-lg {
+      border: 1px solid #ccc;
+    }
+    .divide-y > :not([hidden]) ~ :not([hidden]),
+    .divide-accent > :not([hidden]) ~ :not([hidden]) {
+      border-color: #ccc !important;
+    }
+  }
+</style>
+</head>
+  <body class="bg-primary text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
