@@ -1,20 +1,54 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Granite Factory ERP
 
-# Run and deploy your AI Studio app
+A browser-based app for managing day-to-day records at a granite factory: from raw blocks coming in, through cutting and polishing, to stock and sales.
 
-This contains everything you need to run your app locally.
+> **Status:** early-stage project. Feedback, bug reports, and contributions are welcome.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1yRtZN3sf6rosx8eVs7ldDjPGxLnvzAaC
+## Features
 
-## Run Locally
+- **Dashboard** for an overview of factory data
+- **Block Inward** register for incoming granite blocks
+- **Cutter, Single Cutter, and Bridge Cutter** registers
+- **Polisher** register
+- **Stock** register
+- **Sales** register with party-wise invoices
+- **Reports** with print support
+- **Backup & Restore**, including spreadsheet import and export
+- **Multiple companies**, each with separate data
 
-**Prerequisites:**  Node.js
+## How your data is stored
 
+All data is saved in your browser's localStorage. There is no server or database, so:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Your data stays on your device and is not uploaded by the app.
+- Clearing browser data will erase it, so take regular backups.
+- Data does not sync between browsers or devices.
+
+## Run locally
+
+**Prerequisite:** Node.js. An internet connection is also needed, because some libraries load from a CDN.
+
+```bash
+npm install
+npm run dev
+```
+
+The app runs at http://localhost:3000.
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## Tech stack
+
+React, TypeScript, Vite, and Tailwind CSS.
+
+## Contributing
+
+Please open an issue to report a bug or suggest a feature. Pull requests are welcome.
+
+## License
+
+Released under the [MIT License](LICENSE).
